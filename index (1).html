@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Comunicado oficial: nova precificação da API Oficial do WhatsApp | SB Flows</title>
+  <meta name="theme-color" content="#022c16" />
+  <meta name="description" content="Entenda a nova cobrança por mensagem da API Oficial do WhatsApp, as datas definidas pela Meta e a tabela de valores vigente no Brasil." />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='#022c16'/%3E%3Cg transform='translate(4.975 3.4) scale(1.05)'%3E%3Crect x='7.7' y='3.3' width='10' height='4.6' rx='2' transform='rotate(27 12.7 5.6)' fill='#10b981'/%3E%3Crect x='1.75' y='9' width='16.5' height='4.8' rx='2' transform='rotate(27 10 11.4)' fill='#ecfdf5'/%3E%3Crect x='3.2' y='15.5' width='10' height='4.6' rx='2' transform='rotate(27 8.2 17.8)' fill='#10b981'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" sizes="180x180" href="data:image/png;base64,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" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#022c16',
+            surface: '#053f22',
+            line: '#0f5132',
+            neon: '#10b981',
+            mint: '#6ee7b7'
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif']
+          },
+          maxWidth: { prose: '42rem' },
+          keyframes: {
+            blob: {
+              '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(40px, -30px) scale(1.05)' },
+              '66%': { transform: 'translate(-25px, 20px) scale(0.97)' }
+            }
+          },
+          animation: {
+            'blob-7': 'blob 7s ease-in-out infinite',
+            'blob-9': 'blob 9s ease-in-out infinite reverse'
+          }
+        }
+      },
+      safelist: ['opacity-100', 'translate-y-0']
+    };
+  </script>
+
+  <style>
+    :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 24px); background: #022c16; }
+    body {
+      background-color: #022c16;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(16,185,129,.14), transparent 70%),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(5,63,34,.9), transparent 70%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    ::selection { background: rgba(16,185,129,.35); color: #ecfdf5; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #10b981; outline-offset: 3px; border-radius: 6px; }
+    .toc a[aria-current="true"] { color: #ecfdf5; border-color: #10b981; }
+    .hero-grid { background-image: linear-gradient(rgba(110,231,183,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(110,231,183,.06) 1px, transparent 1px); background-size: 48px 48px; -webkit-mask-image: radial-gradient(ellipse 70% 70% at 30% 20%, #000, transparent 75%); mask-image: radial-gradient(ellipse 70% 70% at 30% 20%, #000, transparent 75%); }
+    /* Sliders do simulador */
+    .sb-range { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; border-radius: 999px; cursor: pointer;
+      background: linear-gradient(90deg, #10b981 0%, #34d399 var(--pct, 0%), rgba(209,250,229,.12) var(--pct, 0%)); }
+    .sb-range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 24px; height: 24px; border-radius: 50%;
+      background: #ecfdf5; border: 4px solid #10b981; box-shadow: 0 0 0 6px rgba(16,185,129,.18), 0 0 18px rgba(16,185,129,.6); transition: transform .15s ease; }
+    .sb-range::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #ecfdf5; border: 4px solid #10b981;
+      box-shadow: 0 0 0 6px rgba(16,185,129,.18), 0 0 18px rgba(16,185,129,.6); }
+    .sb-range::-moz-range-track { background: transparent; }
+    .sb-range:active::-webkit-slider-thumb { transform: scale(1.12); }
+    .sb-range:focus-visible { outline: 2px solid #10b981; outline-offset: 6px; }
+    .sb-num::-webkit-outer-spin-button, .sb-num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .sb-num { -moz-appearance: textfield; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+  </style>
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+
+<body class="isolate font-sans text-emerald-100/75 leading-relaxed">
+
+  <!-- Aurora global: brilho ambiente nas laterais da tela -->
+  <div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden" aria-hidden="true">
+    <div class="absolute -left-20 top-1/4 h-[32rem] w-[32rem] rounded-full bg-neon/30 blur-[140px] animate-blob-7 will-change-transform motion-reduce:animate-none"></div>
+    <div class="absolute -right-20 bottom-1/4 h-[32rem] w-[32rem] rounded-full bg-emerald-400/20 blur-[140px] animate-blob-9 will-change-transform motion-reduce:animate-none"></div>
+  </div>
+
+  <!-- Barra superior -->
+  <header class="relative z-40 border-b border-line/80">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
+      <a href="#" class="flex min-w-0 items-center gap-3">
+        <svg class="h-8 w-auto shrink-0" viewBox="1 0.5 19 23" role="img" aria-label="Semplice Business"><rect x="7.7" y="3.3" width="10" height="4.6" rx="2" transform="rotate(27 12.7 5.6)" fill="#10b981"/><rect x="1.75" y="9" width="16.5" height="4.8" rx="2" transform="rotate(27 10 11.4)" fill="#ecfdf5"/><rect x="3.2" y="15.5" width="10" height="4.6" rx="2" transform="rotate(27 8.2 17.8)" fill="#10b981"/></svg>
+        <span class="font-display text-lg font-semibold tracking-tight text-emerald-50">Semplice Business</span>
+        <span class="hidden h-5 w-px bg-line sm:block" aria-hidden="true"></span>
+        <span class="hidden rounded border border-line bg-surface/50 px-2 py-0.5 text-xs text-mint sm:inline-block">SB Flows</span>
+      </a>
+      <span class="hidden text-xs text-emerald-100/55 sm:inline sm:text-sm">Powered by Helena CRM</span>
+    </div>
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 pb-3 sm:hidden">
+      <span class="rounded border border-line bg-surface/50 px-2 py-0.5 text-xs text-mint">SB Flows</span>
+      <span class="text-xs text-emerald-100/55">Powered by Helena CRM</span>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-5 pb-24 sm:px-8">
+
+    <!-- 1. Hero -->
+    <section class="relative isolate mt-8 overflow-hidden rounded-[2rem] border border-line bg-surface/40 px-6 py-16 sm:mt-12 sm:px-12 sm:py-24 lg:px-16 lg:py-28" aria-labelledby="titulo">
+      <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_20%_0%,rgba(16,185,129,0.22),transparent_65%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_95%_100%,rgba(16,185,129,0.18),transparent_70%)]"></div>
+        <div class="hero-grid absolute inset-0"></div>
+      </div>
+
+      <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative z-10 max-w-4xl">
+        <p class="inline-flex items-center gap-2 rounded-full border border-neon/40 bg-base/40 px-3.5 py-1.5 text-sm font-medium text-mint backdrop-blur-md">
+          <span class="h-1.5 w-1.5 rounded-full bg-neon shadow-[0_0_10px_#10b981]"></span>
+          Comunicado oficial
+        </p>
+        <h1 id="titulo" class="mt-8 font-display text-[2.6rem] font-bold leading-[1.02] tracking-[-0.03em] text-emerald-50 sm:text-6xl lg:text-7xl">
+          A API Oficial do WhatsApp agora é cobrada por mensagem.
+        </h1>
+        <p class="mt-8 max-w-2xl text-lg text-emerald-100/75 sm:text-xl">
+          O que a Meta mudou, quando cada regra entra em vigor e quanto custa cada tipo de envio no Brasil.
+        </p>
+        <div class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-line/80 pt-6 text-sm text-emerald-100/60">
+          <span>Publicado por Semplice Business</span>
+          <span>23 de setembro de 2026</span>
+          <span>Leitura de 6 minutos</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout de leitura: sumário + artigo -->
+    <div class="mt-14 grid gap-12 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-16">
+
+      <!-- Sumário -->
+      <aside class="hidden lg:block">
+        <nav class="toc sticky top-8" aria-label="Sumário">
+          <p class="mb-4 text-sm font-medium text-emerald-100/55">Neste comunicado</p>
+          <ol class="space-y-1 text-sm">
+            <li><a href="#contexto" class="block border-l-2 border-line py-1.5 pl-4 text-emerald-100/60 transition-colors hover:text-emerald-50">O contexto</a></li>
+            <li><a href="#linha-do-tempo" class="block border-l-2 border-line py-1.5 pl-4 text-emerald-100/60 transition-colors hover:text-emerald-50">Linha do tempo</a></li>
+            <li><a href="#regra" class="block border-l-2 border-line py-1.5 pl-4 text-emerald-100/60 transition-colors hover:text-emerald-50">A regra de cobrança</a></li>
+            <li><a href="#tabela" class="block border-l-2 border-line py-1.5 pl-4 text-emerald-100/60 transition-colors hover:text-emerald-50">Tabela de custos</a></li>
+            <li><a href="#simulador" class="block border-l-2 border-line py-1.5 pl-4 text-emerald-100/60 transition-colors hover:text-emerald-50">Simule sua operação</a></li>
+            <li><a href="#sb-flows" class="block border-l-2 border-line py-1.5 pl-4 text-emerald-100/60 transition-colors hover:text-emerald-50">O papel do SB Flows</a></li>
+            <li><a href="#futuro" class="block border-l-2 border-line py-1.5 pl-4 text-emerald-100/60 transition-colors hover:text-emerald-50">O que vem por aí</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <!-- Artigo -->
+      <article class="min-w-0 max-w-prose text-[1.0625rem] sm:text-lg lg:max-w-3xl">
+
+        <!-- 2. Contexto -->
+        <section id="contexto" class="scroll-mt-6">
+          <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-display text-2xl font-semibold tracking-tight text-emerald-50 sm:text-3xl">O contexto</h2>
+          <div class="mt-6 space-y-5">
+            <p>
+              Durante anos, a Meta cobrou a API Oficial do WhatsApp por <strong class="font-semibold text-emerald-100">conversa</strong>: uma janela de 24 horas era aberta e, dentro dela, a empresa podia enviar quantas mensagens quisesse pelo mesmo valor.
+            </p>
+            <p>
+              Esse modelo foi encerrado globalmente pela Meta. A cobrança passou a ser feita <strong class="font-semibold text-emerald-100">por mensagem entregue</strong>, e o valor de cada envio depende da categoria do conteúdo: marketing, utilidade, autenticação ou serviço.
+            </p>
+            <p>
+              Trata-se de uma atualização oficial da Meta, aplicada a todas as empresas que usam a API Oficial do WhatsApp, independentemente da plataforma contratada. Nenhum provedor define essas tarifas: elas são publicadas pela própria Meta para cada país.
+            </p>
+          </div>
+
+          <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out mt-8 rounded-2xl border border-neon/25 bg-neon/[0.06] p-6 shadow-lg shadow-black/20">
+            <p class="font-display text-[1rem] font-semibold text-emerald-50">Em uma frase</p>
+            <p class="mt-2 text-emerald-100/75">Antes você pagava pela janela de conversa. Agora você paga por cada mensagem que a Meta entrega ao seu cliente.</p>
+          </div>
+        </section>
+
+        <!-- 3. Linha do tempo -->
+        <section id="linha-do-tempo" class="mt-20 scroll-mt-6">
+          <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-display text-2xl font-semibold tracking-tight text-emerald-50 sm:text-3xl">Linha do tempo</h2>
+          <p class="mt-6">As mudanças foram publicadas pela Meta em etapas. Estas são as três datas que importam para a sua operação.</p>
+
+          <div class="relative mt-10">
+            <ol class="relative">
+            <li class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative grid grid-cols-[2.5rem_1fr] gap-4 sm:gap-6 pb-8" style="transition-delay:0ms">
+              <span class="absolute left-5 top-10 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-neon/60 to-line" aria-hidden="true"></span>
+              <span class="relative z-10 grid h-10 w-10 place-items-center rounded-full border border-neon/50 bg-base text-emerald-400">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+              </span>
+              <div class="rounded-2xl border border-line bg-surface p-6 sm:p-7">
+                <div class="flex flex-wrap items-baseline justify-between gap-3">
+                  <p class="font-display leading-none"><span class="text-3xl font-bold text-emerald-400 sm:text-4xl">1º</span> <span class="text-[1rem] font-medium text-emerald-100/60">ago. 2026</span></p>
+                  <span class="rounded-full border border-line bg-base/50 px-3 py-1 text-xs font-medium text-mint">Em vigor</span>
+                </div>
+                <h3 class="mt-4 font-display text-lg font-semibold text-emerald-50">IA da Meta cobrada por token</h3>
+                <p class="mt-2 text-emerald-100/75">O agente de inteligência artificial da própria Meta dentro do WhatsApp passou a ser cobrado por token consumido, ou seja, pelo volume de processamento usado em cada resposta gerada.</p>
+              </div>
+            </li>
+            <li class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative grid grid-cols-[2.5rem_1fr] gap-4 sm:gap-6 pb-8" style="transition-delay:120ms">
+              <span class="absolute left-5 top-10 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-neon/60 to-line" aria-hidden="true"></span>
+              <span class="relative z-10 grid h-10 w-10 place-items-center rounded-full border border-neon/60 shadow-[0_0_0_6px_rgba(16,185,129,0.10)] bg-base">
+                <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+              </span>
+              <div class="rounded-2xl border border-line bg-surface p-6 sm:p-7">
+                <div class="flex flex-wrap items-baseline justify-between gap-3">
+                  <p class="font-display leading-none"><span class="text-3xl font-bold text-emerald-400 sm:text-4xl">30</span> <span class="text-[1rem] font-medium text-emerald-100/60">set. 2026</span></p>
+                  <span class="rounded-full border border-line bg-base/50 px-3 py-1 text-xs font-medium text-mint">Prazo final</span>
+                </div>
+                <h3 class="mt-4 font-display text-lg font-semibold text-emerald-50">Prazo de pagamento</h3>
+                <p class="mt-2 text-emerald-100/75">Data-limite para deixar o método de pagamento da conta regularizado e pronto para o novo ciclo. É também o último dia em que as mensagens de serviço seguem totalmente gratuitas.</p>
+              </div>
+            </li>
+            <li class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative grid grid-cols-[2.5rem_1fr] gap-4 sm:gap-6" style="transition-delay:240ms">
+              
+              <span class="relative z-10 grid h-10 w-10 place-items-center rounded-full border border-neon/40 bg-base">
+                <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+              </span>
+              <div class="rounded-2xl border border-line bg-surface p-6 sm:p-7">
+                <div class="flex flex-wrap items-baseline justify-between gap-3">
+                  <p class="font-display leading-none"><span class="text-3xl font-bold text-emerald-400 sm:text-4xl">1º</span> <span class="text-[1rem] font-medium text-emerald-100/60">out. 2026</span></p>
+                  <span class="rounded-full border border-line bg-base/50 px-3 py-1 text-xs font-medium text-mint">Nova regra</span>
+                </div>
+                <h3 class="mt-4 font-display text-lg font-semibold text-emerald-50">Fim das conversas gratuitas</h3>
+                <p class="mt-2 text-emerald-100/75">As respostas enviadas dentro da janela de atendimento de 24 horas (mensagens de serviço) e os templates de utilidade enviados com a janela aberta deixam de ser gratuitos e passam a ser cobrados por mensagem.</p>
+              </div>
+            </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- 4. Regra de cobrança -->
+        <section id="regra" class="mt-20 scroll-mt-6">
+          <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-display text-2xl font-semibold tracking-tight text-emerald-50 sm:text-3xl">A regra de cobrança</h2>
+
+          <div class="mt-6 space-y-5">
+            <p>A lógica nova é simples: <strong class="font-semibold text-emerald-100">cada mensagem entregue gera uma cobrança</strong>, de acordo com a categoria que a Meta atribui ao conteúdo. Na prática, uma única conversa pode gerar várias cobranças.</p>
+          </div>
+
+          <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out mt-8 overflow-hidden rounded-3xl border border-line bg-surface/60 shadow-lg shadow-black/20">
+            <div class="border-b border-line px-5 py-6 sm:px-7">
+              <h3 class="font-display text-xl font-semibold text-emerald-50">Uma conversa, cinco cobranças</h3>
+              <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                <div class="rounded-xl border border-line bg-base/40 px-4 py-3">
+                  <p class="text-xs font-medium text-emerald-100/55">Modelo antigo</p>
+                  <p class="mt-1 text-sm text-emerald-100/75">1 janela de 24 horas = 1 cobrança</p>
+                </div>
+                <div class="rounded-xl border border-neon/40 bg-neon/10 px-4 py-3">
+                  <p class="text-xs font-medium text-mint">Modelo atual</p>
+                  <p class="mt-1 text-sm text-emerald-50">5 mensagens entregues = 5 cobranças</p>
+                </div>
+              </div>
+            </div>
+            <ol class="divide-y divide-line/70">
+              <li class="flex items-start gap-4 px-5 py-5 sm:gap-5 sm:px-7">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-neon/30 bg-neon/10 text-emerald-400">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5v3a1 1 0 0 0 1 1h2.5L12 19V5L6.5 9.5H4a1 1 0 0 0-1 1z"/><path d="M15.5 9a3.5 3.5 0 0 1 0 6"/><path d="M18.5 6a7.5 7.5 0 0 1 0 12"/></svg>
+                </span>
+                <div class="min-w-0 flex-1">
+                  <p class="font-medium text-emerald-50"><span class="text-emerald-100/55">1.</span> Oferta enviada ao contato</p>
+                  <p class="mt-1 text-sm text-emerald-100/60">Template promocional que inicia a conversa.</p>
+                </div>
+                <div class="shrink-0 text-right">
+                  <p class="font-display font-semibold text-emerald-50">R$&nbsp;0,3217</p>
+                  <p class="mt-1 text-xs text-mint">Marketing</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 px-5 py-5 sm:gap-5 sm:px-7">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-neon/30 bg-neon/10 text-emerald-400">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4 19.5l1.3-4.6A7.5 7.5 0 1 1 20 11.5z"/><path d="M9 11.5h.01M12.5 11.5h.01M16 11.5h.01"/></svg>
+                </span>
+                <div class="min-w-0 flex-1">
+                  <p class="font-medium text-emerald-50"><span class="text-emerald-100/55">2.</span> Resposta à dúvida do cliente</p>
+                  <p class="mt-1 text-sm text-emerald-100/60">Mensagem livre dentro da janela de 24 horas.</p>
+                </div>
+                <div class="shrink-0 text-right">
+                  <p class="font-display font-semibold text-emerald-50">R$&nbsp;0,0350<span class="text-emerald-100/55">*</span></p>
+                  <p class="mt-1 text-xs text-mint">Serviço</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 px-5 py-5 sm:gap-5 sm:px-7">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-neon/30 bg-neon/10 text-emerald-400">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.3 2.3 4.7-4.8"/></svg>
+                </span>
+                <div class="min-w-0 flex-1">
+                  <p class="font-medium text-emerald-50"><span class="text-emerald-100/55">3.</span> Confirmação do pedido</p>
+                  <p class="mt-1 text-sm text-emerald-100/60">Template transacional após a compra.</p>
+                </div>
+                <div class="shrink-0 text-right">
+                  <p class="font-display font-semibold text-emerald-50">R$&nbsp;0,0350</p>
+                  <p class="mt-1 text-xs text-mint">Utilidade</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 px-5 py-5 sm:gap-5 sm:px-7">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-neon/30 bg-neon/10 text-emerald-400">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h3"/></svg>
+                </span>
+                <div class="min-w-0 flex-1">
+                  <p class="font-medium text-emerald-50"><span class="text-emerald-100/55">4.</span> Link de pagamento</p>
+                  <p class="mt-1 text-sm text-emerald-100/60">Template de cobrança com o link do boleto ou Pix.</p>
+                </div>
+                <div class="shrink-0 text-right">
+                  <p class="font-display font-semibold text-emerald-50">R$&nbsp;0,0350</p>
+                  <p class="mt-1 text-xs text-mint">Utilidade</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 px-5 py-5 sm:gap-5 sm:px-7">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-neon/30 bg-neon/10 text-emerald-400">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+                </span>
+                <div class="min-w-0 flex-1">
+                  <p class="font-medium text-emerald-50"><span class="text-emerald-100/55">5.</span> Código de rastreio</p>
+                  <p class="mt-1 text-sm text-emerald-100/60">Template com a atualização da entrega.</p>
+                </div>
+                <div class="shrink-0 text-right">
+                  <p class="font-display font-semibold text-emerald-50">R$&nbsp;0,0350</p>
+                  <p class="mt-1 text-xs text-mint">Utilidade</p>
+                </div>
+              </li>
+            </ol>
+            <div class="flex items-center justify-between gap-4 border-t border-line bg-base/40 px-5 py-5 sm:px-7">
+              <p class="text-sm text-emerald-100/75">Total da conversa<br class="sm:hidden" /> <span class="text-emerald-100/55">R$ 0,3217 + 4 × R$ 0,0350</span></p>
+              <p class="font-display text-2xl font-bold text-emerald-400">R$&nbsp;0,4617</p>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-emerald-100/55">* Mensagem de serviço cobrada após a franquia mensal de 1.000 mensagens de serviço do número. Mensagens enviadas pelo cliente não são cobradas.</p>
+
+          <dl class="mt-8 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-surface shadow-lg shadow-black/20">
+            <div class="p-6">
+              <dt class="font-display font-semibold text-emerald-50">Marketing</dt>
+              <dd class="mt-1.5 text-emerald-100/60">Promoções, ofertas, lançamentos, carrinho abandonado e reativação. Cobrado em todo envio, dentro ou fora da janela de 24 horas.</dd>
+            </div>
+            <div class="p-6">
+              <dt class="font-display font-semibold text-emerald-50">Utilidade</dt>
+              <dd class="mt-1.5 text-emerald-100/60">Confirmação de pedido, status de entrega, cobrança e lembretes. A partir de 1º de outubro, cobrado também quando enviado com a janela aberta.</dd>
+            </div>
+            <div class="p-6">
+              <dt class="font-display font-semibold text-emerald-50">Serviço</dt>
+              <dd class="mt-1.5 text-emerald-100/60">Respostas livres ao cliente dentro da janela de 24 horas aberta por ele. A partir de 1º de outubro, cobrado após a franquia mensal gratuita definida pela Meta.</dd>
+            </div>
+          </dl>
+
+          <p class="mt-8">
+            A janela de 24 horas continua existindo, mas mudou de função: ela define <em class="text-emerald-50 not-italic font-medium">quando</em> você pode responder livremente, sem template aprovado. Ela deixou de significar gratuidade. Existe, porém, uma exceção importante.
+          </p>
+
+          <aside class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative mt-10 overflow-hidden rounded-3xl border-2 border-neon/70 bg-neon/[0.12] p-7 shadow-[0_0_40px_-8px_rgba(16,185,129,0.55)] sm:p-9" aria-labelledby="excecao-72h">
+            <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-neon/20 blur-3xl"></div>
+            <div class="relative flex flex-col gap-6 sm:flex-row sm:items-start">
+              <div class="flex shrink-0 flex-col items-start">
+                <span class="font-display text-6xl font-bold leading-none tracking-tight text-neon sm:text-7xl">72h</span>
+                <span class="mt-1 text-sm font-medium text-mint">sem cobrança da Meta</span>
+              </div>
+              <div>
+                <h3 id="excecao-72h" class="font-display text-xl font-semibold leading-snug text-emerald-50 sm:text-2xl">A Exceção de Ouro: Anúncios de Clique para o WhatsApp</h3>
+                <p class="mt-4 text-emerald-100/90">
+                  Se o seu lead vier de um anúncio pago do Facebook ou Instagram com botão para o WhatsApp (Click-to-WhatsApp Ads), a Meta não cobra nenhuma mensagem por 72 horas. Durante esses 3 dias, toda a troca de mensagens, automações e atendimento humano com esse lead é 100% gratuita.
+                </p>
+                <p class="mt-4 text-sm text-mint/90">
+                  Condição da Meta: a janela gratuita de 72 horas é aberta quando a sua empresa responde ao lead em até 24 horas após o clique no anúncio. Com o SB Flows, essa primeira resposta pode ser automática e imediata.
+                </p>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- 5. Tabela de custos -->
+        <section id="tabela" class="mt-20 scroll-mt-6">
+          <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-display text-2xl font-semibold tracking-tight text-emerald-50 sm:text-3xl">A nova tabela de custos</h2>
+          <p class="mt-6">Valores oficiais da Meta para o Brasil, cobrados em reais, por mensagem entregue.</p>
+
+          <div class="mt-10 grid gap-5 md:grid-cols-2">
+            <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative flex flex-col overflow-hidden rounded-3xl border border-line bg-surface/60 p-7 shadow-lg shadow-black/20 backdrop-blur-xl sm:p-8" style="transition-delay:0ms">
+              <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon/70 to-transparent" aria-hidden="true"></div>
+              <p class="font-display text-lg font-semibold text-emerald-50">Marketing</p>
+              <p class="mt-1 text-sm text-emerald-100/60">Ofertas, lançamentos, carrinho abandonado e reativação</p>
+              <div class="mt-6 rounded-2xl border border-line/80 bg-base/50 px-5 py-5">
+                <p class="font-display text-4xl font-bold tracking-tight text-emerald-50 sm:text-5xl">R$&nbsp;0,3217</p>
+                <p class="mt-2 text-sm text-emerald-100/55">por mensagem entregue</p>
+              </div>
+              <ul class="mt-6 space-y-3 text-[0.95rem] text-emerald-100/75">
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400 drop-shadow-[0_0_6px_rgba(16,185,129,0.35)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Cobrado em todo envio, dentro ou fora da janela de 24 horas</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400 drop-shadow-[0_0_6px_rgba(16,185,129,0.35)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Não entra na franquia de mensagens de serviço</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400 drop-shadow-[0_0_6px_rgba(16,185,129,0.35)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Gratuito na janela de 72 horas de anúncios de clique para o WhatsApp</span></li>
+              </ul>
+            </div>
+            <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative flex flex-col overflow-hidden rounded-3xl border border-neon/40 bg-surface/60 p-7 shadow-lg shadow-black/20 backdrop-blur-xl sm:p-8" style="transition-delay:120ms">
+              <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon/70 to-transparent" aria-hidden="true"></div>
+              <p class="font-display text-lg font-semibold text-emerald-50">Utilidade e Serviço</p>
+              <p class="mt-1 text-sm text-emerald-100/60">Pedidos, cobranças, entregas e respostas de atendimento</p>
+              <div class="mt-6 rounded-2xl border border-line/80 bg-base/50 px-5 py-5">
+                <p class="font-display text-4xl font-bold tracking-tight text-emerald-50 sm:text-5xl">R$&nbsp;0,0350</p>
+                <p class="mt-2 text-sm text-emerald-100/55">por mensagem entregue</p>
+              </div>
+              <ul class="mt-6 space-y-3 text-[0.95rem] text-emerald-100/75">
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400 drop-shadow-[0_0_6px_rgba(16,185,129,0.35)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Utilidade cobrada também com a janela aberta a partir de 1º de outubro</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400 drop-shadow-[0_0_6px_rgba(16,185,129,0.35)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Serviço: 1.000 mensagens gratuitas por número a cada mês</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400 drop-shadow-[0_0_6px_rgba(16,185,129,0.35)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Gratuito na janela de 72 horas de anúncios de clique para o WhatsApp</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out mt-6 rounded-2xl border border-neon/25 bg-neon/[0.06] p-6 shadow-lg shadow-black/20">
+            <p class="font-display text-[1rem] font-semibold text-emerald-50">Franquia de 1.000 mensagens de serviço gratuitas</p>
+            <p class="mt-2 text-emerald-100/75">Cada número comercial conectado à API Oficial recebe da Meta 1.000 mensagens de serviço gratuitas por mês. A cobrança começa na 1.001ª mensagem de serviço entregue. A franquia reinicia todo mês, não acumula saldo, não é somada entre números e não vale para templates de marketing ou utilidade.</p>
+          </div>
+
+          <h3 class="mt-12 font-display text-xl font-semibold text-emerald-50">Exemplos de cálculo</h3>
+          <p class="mt-3 text-emerald-100/60">Multiplicação direta pela tarifa oficial, sem arredondamentos.</p>
+
+          <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out mt-6 overflow-x-auto rounded-2xl border border-line shadow-lg shadow-black/20">
+            <table class="w-full min-w-[34rem] text-left text-[1rem]">
+              <thead class="bg-surface text-sm text-emerald-100/60">
+                <tr>
+                  <th scope="col" class="px-5 py-4 font-medium">Cenário mensal</th>
+                  <th scope="col" class="px-5 py-4 font-medium">Cálculo</th>
+                  <th scope="col" class="px-5 py-4 text-right font-medium">Custo Meta</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-line">
+                <tr>
+                  <td class="px-5 py-4 text-emerald-50">1.000 mensagens de marketing</td>
+                  <td class="px-5 py-4 text-emerald-100/60">1.000 × R$ 0,3217</td>
+                  <td class="px-5 py-4 text-right font-display font-semibold text-emerald-50">R$ 321,70</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4 text-emerald-50">10.000 mensagens de utilidade</td>
+                  <td class="px-5 py-4 text-emerald-100/60">10.000 × R$ 0,0350</td>
+                  <td class="px-5 py-4 text-right font-display font-semibold text-emerald-50">R$ 350,00</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4 text-emerald-50">5.000 mensagens de serviço</td>
+                  <td class="px-5 py-4 text-emerald-100/60">(5.000 − 1.000) × R$ 0,0350</td>
+                  <td class="px-5 py-4 text-right font-display font-semibold text-emerald-50">R$ 140,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-4 text-sm text-emerald-100/55">Valores de referência por número comercial. As tarifas podem ser atualizadas pela Meta a qualquer momento.</p>
+        </section>
+
+        <!-- Simulador -->
+        <section id="simulador" class="mt-20 scroll-mt-6">
+          <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-display text-2xl font-semibold tracking-tight text-emerald-50 sm:text-3xl">Simule sua operação</h2>
+          <p class="mt-6">Arraste os controles ou digite a quantidade exata de mensagens entregues no mês para ver o custo estimado da Meta por número comercial.</p>
+
+          <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative mt-8 overflow-hidden rounded-3xl border border-line bg-surface/60 shadow-2xl shadow-black/20 backdrop-blur-xl">
+            <div class="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-neon/20 blur-3xl" aria-hidden="true"></div>
+
+            <!-- Resultado -->
+            <div class="relative border-b border-line px-6 py-8 sm:px-8 sm:py-10">
+              <p class="text-sm font-medium text-mint">Custo Estimado da Meta</p>
+              <p id="sim-total" class="mt-3 break-words font-display text-5xl font-bold leading-none tracking-tight text-emerald-400 sm:text-6xl lg:text-7xl" aria-live="polite">R$&nbsp;0,00</p>
+              <p class="mt-3 text-sm text-emerald-100/55">por mês, calculado sem arredondamentos</p>
+
+              <dl class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                <div class="rounded-2xl border border-line bg-base/50 px-4 py-3">
+                  <dt class="text-xs text-emerald-100/60">Marketing</dt>
+                  <dd id="c-mkt" class="mt-1 font-display text-lg font-semibold text-emerald-50">R$&nbsp;0,00</dd>
+                </div>
+                <div class="rounded-2xl border border-line bg-base/50 px-4 py-3">
+                  <dt class="text-xs text-emerald-100/60">Utilidade</dt>
+                  <dd id="c-util" class="mt-1 font-display text-lg font-semibold text-emerald-50">R$&nbsp;0,00</dd>
+                </div>
+                <div class="rounded-2xl border border-line bg-base/50 px-4 py-3">
+                  <dt class="text-xs text-emerald-100/60">Serviço</dt>
+                  <dd id="c-serv" class="mt-1 font-display text-lg font-semibold text-emerald-50">R$&nbsp;0,00</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Controles -->
+            <div class="relative space-y-9 px-6 py-8 sm:px-8 sm:py-10">
+              <div>
+                <div class="flex flex-wrap items-end justify-between gap-3">
+                  <label for="r-mkt" class="font-medium text-emerald-50">Mensagens de Marketing<span class="mt-0.5 block text-sm font-normal text-emerald-100/55">R$ 0,3217 por mensagem</span></label>
+                  <div class="flex items-center gap-2 rounded-xl border border-line bg-base/60 px-3 py-1.5 focus-within:border-neon/60">
+                    <input id="n-mkt" type="number" inputmode="numeric" min="0" max="50000" step="1" value="0" aria-label="Mensagens de Marketing: quantidade exata" class="sb-num w-[5.5rem] bg-transparent text-right font-display text-lg font-semibold text-emerald-50 outline-none" />
+                    <span class="text-sm text-emerald-100/55">msgs</span>
+                  </div>
+                </div>
+                <input id="r-mkt" type="range" min="0" max="50000" step="100" value="0" class="sb-range mt-4" />
+                <div class="mt-2 flex justify-between text-xs text-emerald-100/55"><span>0</span><span>50.000</span></div>
+              </div>
+              <div>
+                <div class="flex flex-wrap items-end justify-between gap-3">
+                  <label for="r-util" class="font-medium text-emerald-50">Mensagens de Utilidade<span class="mt-0.5 block text-sm font-normal text-emerald-100/55">R$ 0,0350 por mensagem</span></label>
+                  <div class="flex items-center gap-2 rounded-xl border border-line bg-base/60 px-3 py-1.5 focus-within:border-neon/60">
+                    <input id="n-util" type="number" inputmode="numeric" min="0" max="50000" step="1" value="0" aria-label="Mensagens de Utilidade: quantidade exata" class="sb-num w-[5.5rem] bg-transparent text-right font-display text-lg font-semibold text-emerald-50 outline-none" />
+                    <span class="text-sm text-emerald-100/55">msgs</span>
+                  </div>
+                </div>
+                <input id="r-util" type="range" min="0" max="50000" step="100" value="0" class="sb-range mt-4" />
+                <div class="mt-2 flex justify-between text-xs text-emerald-100/55"><span>0</span><span>50.000</span></div>
+              </div>
+              <div>
+                <div class="flex flex-wrap items-end justify-between gap-3">
+                  <label for="r-serv" class="font-medium text-emerald-50">Mensagens de Serviço<span class="mt-0.5 block text-sm font-normal text-emerald-100/55">R$ 0,0350 por mensagem após a franquia</span></label>
+                  <div class="flex items-center gap-2 rounded-xl border border-line bg-base/60 px-3 py-1.5 focus-within:border-neon/60">
+                    <input id="n-serv" type="number" inputmode="numeric" min="0" max="50000" step="1" value="1000" aria-label="Mensagens de Serviço: quantidade exata" class="sb-num w-[5.5rem] bg-transparent text-right font-display text-lg font-semibold text-emerald-50 outline-none" />
+                    <span class="text-sm text-emerald-100/55">msgs</span>
+                  </div>
+                </div>
+                <input id="r-serv" type="range" min="0" max="50000" step="100" value="1000" class="sb-range mt-4" />
+                <div class="mt-2 flex justify-between text-xs text-emerald-100/55"><span>0</span><span>50.000</span></div>
+              </div>
+              <p id="serv-note" class="-mt-5 flex items-center gap-2 text-sm text-mint" aria-live="polite">
+                <svg class="h-4 w-4 shrink-0 text-neon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                <span id="serv-note-text">1.000 mensagens gratuitas aplicadas</span>
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-4 text-sm text-emerald-100/55">Estimativa baseada nas tarifas oficiais da Meta para o Brasil. Não inclui o plano do SB Flows, a janela gratuita de 72 horas de anúncios de clique para o WhatsApp nem eventuais atualizações de tarifa publicadas pela Meta.</p>
+        </section>
+
+        <!-- 6. Fechamento -->
+        <section id="sb-flows" class="mt-20 scroll-mt-6">
+          <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-display text-2xl font-semibold tracking-tight text-emerald-50 sm:text-3xl">O papel do SB Flows</h2>
+          <div class="mt-6 space-y-5">
+            <p>
+              A cobrança continua exatamente como está: faturada de forma direta na sua conta do Business Manager (BM) da Meta, usando o método de pagamento que você já tem cadastrado. O SB Flows não intermedeia nem adiciona taxas a esse pagamento. O que a nossa plataforma faz é fornecer a inteligência e o painel para você acompanhar esse custo em tempo real, lado a lado com os resultados que cada mensagem gera.
+            </p>
+            <p>
+              Com a cobrança por mensagem, cada envio passa a ter um custo visível. Isso muda a pergunta de “quantas mensagens eu mando?” para “quantas dessas mensagens geram resultado?”. É exatamente aí que a nossa tecnologia atua.
+            </p>
+            <p>
+              Nossas automações são desenhadas para conversão: fluxos que qualificam o contato antes de gastar um disparo de marketing, segmentação que evita enviar ofertas para quem não vai comprar e atendimento automatizado que resolve em menos mensagens. Uma única venda recuperada por um fluxo bem construído cobre o custo de centenas de mensagens de utilidade.
+            </p>
+          </div>
+
+          <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out mt-10 rounded-3xl border border-line bg-gradient-to-b from-surface to-base p-8 shadow-2xl shadow-black/20 sm:p-10">
+            <p class="font-display text-2xl font-semibold leading-snug tracking-tight text-emerald-50 sm:text-3xl">
+              A regra é da Meta, vale para todos. A diferença está no retorno que cada mensagem gera.
+            </p>
+            <p class="mt-4 text-emerald-100/60">Fale com o nosso time para revisar seus fluxos antes de 1º de outubro e ajustar sua operação à nova cobrança.</p>
+          </div>
+        </section>
+
+        <!-- 7. O que vem por aí -->
+        <section id="futuro" class="mt-24 scroll-mt-6">
+          <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-display text-2xl font-semibold tracking-tight text-emerald-50 sm:text-3xl">O que vem por aí: Nossa resposta à Meta</h2>
+          <p class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out mt-6">Não ficamos parados esperando as regras mudarem. Para proteger a sua rentabilidade e o seu ROI, estamos lançando atualizações massivas que criam rotas alternativas de atendimento com custo zero de mensageria.</p>
+
+          <div class="mt-10 grid gap-5 md:grid-cols-2">
+            <article class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative flex flex-col overflow-hidden rounded-3xl border border-neon/40 bg-gradient-to-br from-surface via-surface to-base/50 p-7 shadow-[0_0_40px_-12px_rgba(16,185,129,0.45)] sm:p-9" style="transition-delay:0ms">
+              <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon/80 to-transparent" aria-hidden="true"></div>
+              <div class="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-neon/15 blur-3xl" aria-hidden="true"></div>
+              <div class="relative flex items-start justify-between gap-4">
+                <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-neon/40 bg-neon/10 text-emerald-400">
+                  <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="14" rx="2.5"/><path d="M2.5 8h19"/><path d="M5.5 6h.01M8 6h.01"/><path d="M9 14.5l-1.5 2v-2H7a1 1 0 0 1-1-1v-2.5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1H9z"/></svg>
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-neon/60 bg-neon/15 px-3 py-1 text-xs font-semibold text-mint shadow-[0_0_14px_rgba(16,185,129,0.45)]">
+                  <span class="h-1.5 w-1.5 rounded-full bg-neon shadow-[0_0_8px_#10b981]"></span>
+                  Em breve
+                </span>
+              </div>
+              <h3 class="relative mt-7 font-display text-2xl font-semibold leading-tight tracking-tight text-emerald-50">WebChat Nativo</h3>
+              <p class="relative mt-1.5 text-sm font-medium text-mint">Custo zero de mensagem</p>
+              <ul class="relative space-y-3 mt-5 border-t border-line/80 pt-5 text-emerald-100/85">
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-neon drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Captura e qualificação de leads no site</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-neon drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Atendimento com custo zero de mensageria da Meta</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-neon drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Transbordo inteligente direto para o WhatsApp</span></li>
+              </ul>
+            </article>
+            <article class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative flex flex-col overflow-hidden rounded-3xl border border-neon/40 bg-gradient-to-br from-surface via-surface to-base/50 p-7 shadow-[0_0_40px_-12px_rgba(16,185,129,0.45)] sm:p-9" style="transition-delay:120ms">
+              <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon/80 to-transparent" aria-hidden="true"></div>
+              <div class="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-neon/15 blur-3xl" aria-hidden="true"></div>
+              <div class="relative flex items-start justify-between gap-4">
+                <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-neon/40 bg-neon/10 text-emerald-400">
+                  <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3l1.5 4-2 1.3a11 11 0 0 0 7.7 7.7l1.3-2 4 1.5v3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/><path d="M15 3.5a5.5 5.5 0 0 1 5.5 5.5"/><path d="M15 7a2 2 0 0 1 2 2"/></svg>
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-neon/60 bg-neon/15 px-3 py-1 text-xs font-semibold text-mint shadow-[0_0_14px_rgba(16,185,129,0.45)]">
+                  <span class="h-1.5 w-1.5 rounded-full bg-neon shadow-[0_0_8px_#10b981]"></span>
+                  Em breve
+                </span>
+              </div>
+              <h3 class="relative mt-7 font-display text-2xl font-semibold leading-tight tracking-tight text-emerald-50">Chamadas de Voz via API Oficial</h3>
+              <p class="relative mt-1.5 text-sm font-medium text-mint">Central de atendimento no WhatsApp</p>
+              <ul class="relative space-y-3 mt-5 border-t border-line/80 pt-5 text-emerald-100/85">
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-neon drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>URA profissional (“Digite 1 para Comercial”)</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-neon drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Distribuição automática para a equipe</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-neon drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Gravação e transcrição de áudio nativas</span></li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out mt-6 flex flex-col gap-5 rounded-2xl border border-line bg-surface p-6 sm:flex-row sm:items-start sm:p-7">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-base text-emerald-400">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><path d="M20 4v4.5h-4.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><path d="M4 20v-4.5h4.5"/></svg>
+            </span>
+            <div>
+              <p class="font-display text-[1rem] font-semibold text-emerald-50">Melhoria contínua</p>
+              <p class="mt-2 text-emerald-100/75">Também estamos implementando melhorias contínuas nos prompts dos Agentes de IA, na otimização dos fluxos de chatbot e nas cadências de mensagens. Nosso time de especialistas trabalhará lado a lado com a sua operação para aplicar cada uma dessas estratégias e maximizar o seu ROI.</p>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+
+    <!-- Pre-footer CTA -->
+    <section class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out relative isolate mt-24 overflow-hidden rounded-[2rem] border border-neon/40 bg-gradient-to-br from-surface via-surface to-base px-6 py-14 text-center shadow-[0_0_60px_-20px_rgba(16,185,129,0.55)] sm:px-12 sm:py-20" aria-labelledby="cta-titulo">
+      <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon/80 to-transparent"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_50%_0%,rgba(16,185,129,0.22),transparent_70%)]"></div>
+      </div>
+      <h2 id="cta-titulo" class="mx-auto max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-emerald-50 sm:text-5xl">Sua operação de WhatsApp está preparada para o futuro?</h2>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-emerald-100/75 sm:text-xl">Descubra como o SB Flows reduz seus custos da Meta enquanto aumenta a sua conversão com IA e automação.</p>
+      <div class="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
+        <a href="https://wa.me/5548935054001" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-neon px-7 py-4 font-display text-[1rem] font-semibold text-[#022c16] shadow-[0_0_30px_-4px_rgba(16,185,129,0.8)] transition hover:bg-emerald-400 hover:shadow-[0_0_40px_-2px_rgba(16,185,129,0.9)] active:scale-[0.98]">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.25A9.75 9.75 0 0 0 3.6 16.9L2.3 21.7l4.9-1.3A9.75 9.75 0 1 0 12 2.25zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.05 8.05 0 1 1 12 20.05zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2 4.7 4.7 0 0 0 1 2.5 10.7 10.7 0 0 0 4.1 3.6c1.5.7 2.1.7 2.9.6a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.1-.2-.2-.4-.3z"/></svg>
+          Falar com um Especialista
+        </a>
+        <a href="https://semplicebusiness.com.br/#planos" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-2xl border border-emerald-100/25 bg-transparent px-7 py-4 font-display text-[1rem] font-semibold text-emerald-50 transition hover:border-neon/60 hover:bg-neon/10">
+          Conhecer a Plataforma
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative mt-24 border-t border-line bg-base/60">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon/50 to-transparent" aria-hidden="true"></div>
+    <div class="mx-auto max-w-6xl px-5 pt-16 pb-10 sm:px-8">
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.9fr_1.6fr_1fr] lg:gap-10">
+
+        <!-- Marca -->
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-3">
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-neon/15 ring-1 ring-neon/40">
+              <span class="h-2.5 w-2.5 rounded-full bg-neon shadow-[0_0_12px_#10b981]"></span>
+            </span>
+            <p class="font-display text-xl font-semibold tracking-tight text-emerald-50">Semplice Business</p>
+          </div>
+          <p class="mt-5 max-w-sm text-[0.95rem] text-emerald-100/60">Plataforma líder em automação e atendimento via API Oficial do WhatsApp. Escale sua operação com segurança e inteligência.</p>
+        </div>
+
+        <!-- Links úteis -->
+        <nav aria-labelledby="ft-links">
+          <p id="ft-links" class="font-display text-sm font-semibold text-emerald-50">Links Úteis</p>
+          <ul class="mt-5 space-y-3 text-[0.95rem]">
+            <li><a href="https://semplicebusiness.com.br" target="_blank" rel="noopener" class="text-emerald-100/60 transition-colors hover:text-emerald-50">Site Oficial</a></li>
+            <li><a href="https://docs.flw.chat/guide" target="_blank" rel="noopener" class="text-emerald-100/60 transition-colors hover:text-emerald-50">Base de Conhecimento</a></li>
+            <li><a href="https://status.wts.chat/" target="_blank" rel="noopener" class="text-emerald-100/60 transition-colors hover:text-emerald-50">Status do Serviço</a></li>
+            <li><a href="https://www.asaas.com/parceiros/semplicebusiness" target="_blank" rel="noopener" class="text-emerald-100/60 transition-colors hover:text-emerald-50">Parceiro Asaas</a></li>
+          </ul>
+        </nav>
+
+        <!-- Suporte -->
+        <div>
+          <p class="font-display text-sm font-semibold text-emerald-50">Suporte</p>
+          <ul class="mt-5 space-y-3.5 text-[0.95rem] text-emerald-100/60">
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>São José, SC</span></li>
+            <li><a href="tel:+5548935054001" class="flex items-start gap-3 transition-colors hover:text-emerald-50"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3l1.5 4-2 1.3a11 11 0 0 0 7.7 7.7l1.3-2 4 1.5v3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></svg><span>+55 (48) 93505-4001</span></a></li>
+            <li><a href="mailto:contato@semplicebusiness.com.br" class="flex items-start gap-3 transition-colors hover:text-emerald-50"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg><span class="whitespace-nowrap font-mono text-xs text-emerald-100/70 md:text-sm">contato@semplicebusiness.com.br</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Redes sociais -->
+        <div>
+          <p class="font-display text-sm font-semibold text-emerald-50">Redes Sociais</p>
+          <div class="mt-5 flex gap-3">
+            <a href="https://www.instagram.com/semplicebusiness" target="_blank" rel="noopener" aria-label="Instagram da Semplice Business" class="grid h-11 w-11 place-items-center rounded-xl border border-line bg-surface text-emerald-100/70 transition hover:border-neon/60 hover:bg-neon/10 hover:text-emerald-50"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" clip-rule="evenodd"/></svg></a>
+            <a href="https://www.facebook.com/semplicebusiness.com.br/" target="_blank" rel="noopener" aria-label="Facebook da Semplice Business" class="grid h-11 w-11 place-items-center rounded-xl border border-line bg-surface text-emerald-100/70 transition hover:border-neon/60 hover:bg-neon/10 hover:text-emerald-50"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21.5v-8h2.7l.4-3.2h-3.1V8.3c0-.9.3-1.5 1.6-1.5h1.7V4a22 22 0 0 0-2.5-.1c-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3v3.2h2.8v8h3.4z"/></svg></a>
+            <a href="https://www.linkedin.com/company/semplice-business/" target="_blank" rel="noopener" aria-label="LinkedIn da Semplice Business" class="grid h-11 w-11 place-items-center rounded-xl border border-line bg-surface text-emerald-100/70 transition hover:border-neon/60 hover:bg-neon/10 hover:text-emerald-50"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 2h15A2.5 2.5 0 0 1 22 4.5v15a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 19.5v-15A2.5 2.5 0 0 1 4.5 2zM6.9 9.8H9.6V18H6.9V9.8zM8.25 5.7a1.55 1.55 0 1 1 0 3.1 1.55 1.55 0 0 1 0-3.1zM11.3 9.8h2.6v1.1h.04c.36-.68 1.24-1.4 2.56-1.4 2.74 0 3.25 1.8 3.25 4.15V18h-2.7v-3.9c0-.93-.02-2.13-1.3-2.13-1.3 0-1.5 1.02-1.5 2.06V18h-2.7V9.8z" clip-rule="evenodd"/></svg></a>
+          </div>
+          <!-- Selos institucionais: ícones neutros. Para usar os logotipos oficiais, cole o SVG do kit de marca de cada empresa dentro do respectivo <a> -->
+          <div class="mt-3 flex gap-3" aria-label="Selos institucionais">
+            <a href="https://www.facebook.com/business/partner-directory" target="_blank" rel="noopener" aria-label="Meta Business Partner" title="Meta Business Partner" class="grid h-11 w-11 place-items-center rounded-xl border border-line bg-surface text-emerald-100/70 transition hover:border-neon/60 hover:bg-neon/10 hover:text-emerald-50"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.3"/></svg></a>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener" aria-label="Powered by AWS" title="Powered by AWS" class="grid h-11 w-11 place-items-center rounded-xl border border-line bg-surface text-emerald-100/70 transition hover:border-neon/60 hover:bg-neon/10 hover:text-emerald-50"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18.5h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.6 9.1 4.75 4.75 0 0 0 7 18.5z"/></svg></a>
+            <a href="https://www.asaas.com/parceiros/semplicebusiness" target="_blank" rel="noopener" aria-label="Parceiro Asaas" title="Parceiro Asaas" class="grid h-11 w-11 place-items-center rounded-xl border border-line bg-surface text-emerald-100/70 transition hover:border-neon/60 hover:bg-neon/10 hover:text-emerald-50"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h3"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div class="mt-14 flex flex-col gap-4 border-t border-line pt-8 text-sm text-emerald-100/55 md:flex-row md:items-center md:justify-between">
+        <p>Copyright © 2026. Todos os Direitos Reservados. SEMPLICE BUSINESS LTDA | CNPJ 57.604.826/0001-87</p>
+        <div class="flex shrink-0 gap-6">
+          <a href="https://sbflows.wts.chat/terms/privacy-policy" target="_blank" rel="noopener" class="transition-colors hover:text-emerald-50">Política de Privacidade</a>
+          <a href="https://sbflows.wts.chat/terms/terms-of-use" target="_blank" rel="noopener" class="transition-colors hover:text-emerald-50">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Destaca a seção atual no sumário
+    (function () {
+      var links = document.querySelectorAll('.toc a');
+      if (!links.length || !('IntersectionObserver' in window)) return;
+      var map = {};
+      links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            links.forEach(function (a) { a.removeAttribute('aria-current'); });
+            var link = map[entry.target.id];
+            if (link) link.setAttribute('aria-current', 'true');
+          }
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      Object.keys(map).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    })();
+  </script>
+  <script>
+    // Scroll reveal
+    (function () {
+      var items = document.querySelectorAll('.reveal');
+      var show = function (el) { el.classList.remove('opacity-0', 'translate-y-6'); el.classList.add('opacity-100', 'translate-y-0'); };
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) { items.forEach(show); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+
+    // Simulador de custos
+    (function () {
+      // Tarifas em décimos de milésimo de real (R$ 0,3217 = 3217) para cálculo inteiro e exato
+      var TARIFA = { mkt: 3217, util: 350, serv: 350 };
+      var FRANQUIA = 1000, MAX = 50000;
+      var brl = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 4 });
+      var int = new Intl.NumberFormat('pt-BR');
+      var fmt = function (u) { return brl.format(u / 10000); };
+      var keys = ['mkt', 'util', 'serv'];
+      var $ = function (id) { return document.getElementById(id); };
+      if (!$('sim-total')) return;
+
+      var clamp = function (v) { v = parseInt(v, 10); return isNaN(v) ? 0 : Math.min(MAX, Math.max(0, v)); };
+      var paint = function (k, v) { $('r-' + k).style.setProperty('--pct', (v / MAX * 100) + '%'); };
+
+      function calc() {
+        var q = {};
+        keys.forEach(function (k) { q[k] = clamp($('n-' + k).value); });
+        var cMkt = q.mkt * TARIFA.mkt;
+        var cUtil = q.util * TARIFA.util;
+        var cServ = q.serv > FRANQUIA ? (q.serv - FRANQUIA) * TARIFA.serv : 0;
+        $('c-mkt').textContent = fmt(cMkt);
+        $('c-util').textContent = fmt(cUtil);
+        $('c-serv').textContent = fmt(cServ);
+        $('sim-total').textContent = fmt(cMkt + cUtil + cServ);
+        $('serv-note-text').textContent = q.serv > FRANQUIA
+          ? '1.000 mensagens gratuitas aplicadas. ' + int.format(q.serv - FRANQUIA) + ' cobradas.'
+          : q.serv === FRANQUIA
+            ? '1.000 mensagens gratuitas aplicadas.'
+            : 'Dentro da franquia gratuita de 1.000 mensagens de serviço.';
+      }
+
+      keys.forEach(function (k) {
+        var r = $('r-' + k), n = $('n-' + k);
+        paint(k, clamp(r.value));
+        r.addEventListener('input', function () { n.value = r.value; paint(k, clamp(r.value)); calc(); });
+        n.addEventListener('input', function () { var v = clamp(n.value); r.value = v; paint(k, v); calc(); });
+        n.addEventListener('blur', function () { n.value = clamp(n.value); });
+      });
+      calc();
+    })();
+  </script>
+</body>
+</html>
